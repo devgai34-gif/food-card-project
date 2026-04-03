@@ -1,11 +1,11 @@
 //3. Создать функцию, которая принимает 2 параметра: 
 // город и температуру
 
-function printValue(cityName,currentTemperature) {
+function showWeather(cityName, currentTemperature) {
   console.log(" в " + cityName + " t* — " + currentTemperature + " градус");
 }
 
-printValue("Грозном", 1);
+showWeather("Грозном", 1);
 
 //4. Создать переменную,
 //которая хранит внутри себя скорость света
@@ -30,19 +30,19 @@ compareSpeed(300000);
 let product = "Мотоцикл-Ямаха";
 let price = 1000;
 
-function buyMotik(moneyHave) {
-  if (moneyHave >= price) {
+function showProductInfo(budget) {
+  if (budget >= price) {
     //Хватило 
     console.log(product + "Ямаха мой");
   } else {
     // Не хватило
-    let notEnough = price - moneyHave;
+    let notEnough = price - budget;
     console.log("не хватает " + notEnough + "$");
   }
 }
 
-buyMotik(1);  
-buyMotik(10000);
+showProductInfo(1);  
+showProductInfo(10000);
 
 //6. Создать 1 функцию и именовать её
 //7. Создать 3 переменных 
@@ -51,8 +51,8 @@ let moto = "Umaha";
 let speed = "200к/м";
 let mileage = "50к/м";
 
-function toKnowProduct() {
+function outputCarInfo() {
   console.log("Название " + moto + " Скорость " + speed +" Пробег "+ mileage);
 }
 
-  toKnowProduct();
+outputCarInfo();
