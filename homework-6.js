@@ -9,7 +9,7 @@ const person = {
 };
 
 //4. Создайте объект, который будет хранить данные об авто
-const infoMotoData = {
+const infoDataMoto = {
   brand: "Yamaha",   
   model: "R-1",          
   year: 2020,             
@@ -17,24 +17,24 @@ const infoMotoData = {
   transmission: "Механика"  
 };
 
-infoMotoData.owner = person;
-console.log(infoMotoData);
+infoDataMoto.owner = person;
+console.log(infoDataMoto);
 
 //5. Написать функцию которая аргументом будет принимать объект,
 // описанный в пункте №4.
-function checkSpeed(infoMotoData) {
+function checkSpeed(infoDataMoto) {
 
-  infoMotoData.maxSpeed = infoMotoData.maxSpeed || 200;
+  infoDataMoto.maxSpeed = infoDataMoto.maxSpeed ?? 200;
   
   console.log("Максимальная скорость установлена");
 }
-checkSpeed(infoMotoData);
-console.log(infoMotoData.maxSpeed);
+checkSpeed(infoDataMoto);
+console.log(infoDataMoto.maxSpeed);
 
 //6. Написать функцию, которая получает первым аргументом  — объект,
 //а вторым аргументом — свойство объекта
 
-function showInfo(obj, key) {
+function showInfoObject(obj, key) {
 
   console.log(`его ${key} — это ${obj[key]}`);
 }
@@ -44,8 +44,8 @@ const motoInfo = {
   color: "Черный"
 };
 
-showInfo(motoInfo, "brand"); 
-showInfo(motoInfo, "color"); 
+showInfoObject(motoInfo, "brand"); 
+showInfoObject(motoInfo, "color"); 
 
 //7.Создать массив продуктов
 
@@ -108,18 +108,11 @@ console.log(bigGarage);
 
 //10.Написать функцию, которая принимает 
 // массив сущностей с задания №9.
-const markRareVehicles = (vehiclesArray) => {
-  const updatedGarage = vehiclesArray.map(item => {
-    
-    if (item.year > 2000) {
-      item.isRare = true;
-    } else {
-      item.isRare = false;
-    }
-    return item;
-  });
-  return updatedGarage;
-}
+const markRareVehicles = (vehiclesArray) => 
+  vehiclesArray.map(item => ({
+    ...item,
+    isRare: item.year > 2000 ? true : false
+  }));
 
 let finalGarage = markRareVehicles(bigGarage);
 
