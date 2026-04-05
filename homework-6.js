@@ -9,46 +9,38 @@ const person = {
 };
 
 //4. Создайте объект, который будет хранить данные об авто
-const infoDataMoto = {
+const updateMotoSpeed= {
   brand: "Yamaha",   
   model: "R-1",          
   year: 2020,             
   color: "Черный",         
   transmission: "Механика"  
 };
-
-infoDataMoto.owner = person;
-console.log(infoDataMoto);
+updateMotoSpeed.owner = person;
+console.log(updateMotoSpeed);
 
 //5. Написать функцию которая аргументом будет принимать объект,
 // описанный в пункте №4.
-function checkSpeed(infoDataMoto) {
-
-  infoDataMoto.maxSpeed = infoDataMoto.maxSpeed ?? 200;
-  
+function checkMaxSpeed (updateMotoSpeed) {
+  updateMotoSpeed.maxSpeed = updateMotoSpeed.maxSpeed ?? 200;
   console.log("Максимальная скорость установлена");
 }
-checkSpeed(infoDataMoto);
-console.log(infoDataMoto.maxSpeed);
+checkMaxSpeed(updateMotoSpeed);
+console.log(updateMotoSpeed.maxSpeed);
 
 //6. Написать функцию, которая получает первым аргументом  — объект,
 //а вторым аргументом — свойство объекта
-
-function showInfoObject(obj, key) {
-
+function showObjectProperty(obj, key) {
   console.log(`его ${key} — это ${obj[key]}`);
 }
-
 const motoInfo = {
   brand: "Yamaha XZ-400",
   color: "Черный"
 };
-
-showInfoObject(motoInfo, "brand"); 
-showInfoObject(motoInfo, "color"); 
+showObjectProperty (motoInfo, "brand"); 
+showObjectProperty (motoInfo, "color"); 
 
 //7.Создать массив продуктов
-
 const motoParts = [
   "Двигатель",    
   "Колесо",       
@@ -56,19 +48,19 @@ const motoParts = [
   "Рама",         
   "Цепь"          
 ];
-  
-//8.Создать массив, состоящий из объектов
+
+  //8.Создать массив, состоящий из объектов
 const parking = [
   {
     name: "Honda",
     speed: 250,
-    year: 2022,
+    year: 1999,
     color: "Красный"
   },
   {
     name: "Yamaha",
     speed: 280,
-    year: 2023,
+    year: 1998,
     color: "Синий"
   },
   {
@@ -78,14 +70,12 @@ const parking = [
     color: "Белый"
   }
 ];
-
 parking.push({
   name: "Kawasaki",
   speed: 300,
   year: 2024,
   color: "Зеленый"
 });
-
 console.log(parking);
 
 //9.Создать еще один массив, состоящих из тех же мотоциклов
@@ -102,7 +92,6 @@ const moonRovers = [{
     color: "Золотой"
   }
 ];
-
 const bigGarage = [...parking, ...moonRovers];
 console.log(bigGarage);
 
@@ -113,7 +102,9 @@ const markRareVehicles = (vehiclesArray) =>
     ...item,
     isRare: item.year > 2000 ? true : false
   }));
-
 let finalGarage = markRareVehicles(bigGarage);
+function displayFinalResult(data) {
+  data.forEach(m => console.log(`Объект: ${m.name}, Редкий: ${m.isRare}`));
+}
+displayFinalResult(finalGarage);
 
-console.log(finalGarage);
