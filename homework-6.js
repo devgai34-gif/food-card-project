@@ -35,6 +35,7 @@ console.log(bike.maxSpeed);
 function showObjectProperty(obj, key) {
   console.log(`его ${key} — это ${obj[key]}`);
 }
+
 const motoInfo = {
   brand: "Yamaha XZ-400",
   color: "Черный",
@@ -93,8 +94,8 @@ const moonRovers = [
   },
 ];
 
-const bigGarage = [...carParking, ...moonRovers];
-console.log(bigGarage);
+const allCars = [...carParking, ...moonRovers];
+console.log(allCars);
 
 //10.Написать функцию, которая принимает
 // массив сущностей с задания №9.
@@ -104,7 +105,7 @@ const markRareVehicles = (vehiclesArray) =>
     isRare: item.year > 2000 ? true : false,
   }));
 
-let finalGarage = markRareVehicles(bigGarage);
+let finalGarage = markRareVehicles(allCars);
 
 function displayFinalResult(data) {
   data.forEach((m) => console.log(`Объект: ${m.name}, Редкий: ${m.isRare}`));
