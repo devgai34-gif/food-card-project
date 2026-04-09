@@ -13,16 +13,13 @@ console.log("Диски есть?", hasDisks ? "Да" : "Нет");
 
 //ЗАДАНИЕ 4: Написать функцию, аргументом будет принимать массив 
 // и переворачивать его
-function flipArray(reverseArray) {
-  reverseArray.reverse();
-  return reverseArray;
+function reverseArray(array) {
+  return [...array].reverse();
 }
-
-numbers = filteredNumbers;
-console.log(flipArray(numbers));
+console.log(reverseArray(numbers));
 
 const partsList = ["Бак", "Крыло", "Фильтр", "Руль", "Диски"];
-console.log(flipArray(partsList));
+console.log(reverseArray(partsList));
 
 // ЗАДАНИЕ 7: Фильтр по почте .com
 const comComments = socialMediaComments.filter(comment => {
@@ -47,23 +44,23 @@ console.log(shortComments);
 
 //ЗАДАНИЕ 10: массив добавить-isInvalid тем что > 180 символов
 //true, меньше - false.
-const validatedComments = socialMediaComments.map(comment => {
-  const isInvalid = comment.text.length > 180;
-  return { ...comment, isInvalid: isInvalid };
-});
+const validatedComments = socialMediaComments.map(comment => ({
+  ...comment,
+  isInvalid: comment.text.length > 180
+}));
 console.log(validatedComments);
 
 //ЗАДАНИЕ 11:через reduce,map вывести массив почт
-const byMap = socialMediaComments.map(c => c.email);
+const emailbyMap = socialMediaComments.map(c => c.email);
 
-const byReduce = socialMediaComments.reduce((acc, c) => {
+const emailbyReduce = socialMediaComments.reduce((acc, c) => {
   acc.push(c.email);
   return acc;
 }, []);
-console.log(byMap);
-console.log(byReduce);
+console.log(emailbyMap);
+console.log(emailbyReduce);
 
 //ЗАДАНИЕ 12:через toString(), join() перебрать массив
 // с з/д №11,привести к строке
-const finalString = byMap.join(', ');
+const finalString = emailbyMap.join(', ');
 console.log(finalString);
