@@ -13,13 +13,11 @@ console.log("Диски есть?", hasDisks ? "Да" : "Нет");
 
 //ЗАДАНИЕ 4: Написать функцию, аргументом будет принимать массив 
 // и переворачивать его
-function reverseArray(array) {
-  return [...array].reverse();
-}
+const reverseArray = array => array.reverse();
 console.log(reverseArray(numbers));
 
 const partsList = ["Бак", "Крыло", "Фильтр", "Руль", "Диски"];
-console.log(reverseArray(partsList));
+console.log(reverseArray(partsList)); 
 
 // ЗАДАНИЕ 7: Фильтр по почте .com
 const comComments = socialMediaComments.filter(comment => {
@@ -51,16 +49,16 @@ const validatedComments = socialMediaComments.map(comment => ({
 console.log(validatedComments);
 
 //ЗАДАНИЕ 11:через reduce,map вывести массив почт
-const emailbyMap = socialMediaComments.map(c => c.email);
+const emailByMap = socialMediaComments.map(c => c.email);
 
-const emailbyReduce = socialMediaComments.reduce((acc, c) => {
+const emailByReduce = socialMediaComments.reduce((acc, c) => {
   acc.push(c.email);
   return acc;
 }, []);
-console.log(emailbyMap);
-console.log(emailbyReduce);
+console.log(emailByMap);
+console.log(emailByReduce);
 
 //ЗАДАНИЕ 12:через toString(), join() перебрать массив
 // с з/д №11,привести к строке
-const finalString = emailbyMap.join(', ');
+const finalString = emailByMap.join(', ');
 console.log(finalString);
