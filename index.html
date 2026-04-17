@@ -1,6 +1,4 @@
-
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
@@ -20,20 +18,14 @@
     <h1 class="product-title">Выбери свой продукт</h1>
 
     <div class="controls">
-      <button id="change-all-card-color-button">
-        Поменять цвет всех карточек
-      </button>
-      <button id="change-color-first-card-btn">
-        Поменять цвет первой карточки
-      </button>
+      <button id="change-all-card-color-button">Поменять цвет всех карточек</button>
+      <button id="change-color-first-card-btn">Поменять цвет первой карточки</button>
       <button id="open-google-btn">Открыть страницу Google.com</button>
       <button id="output-log-btn">Вывести в консоль лог</button>
-      <button id="change-color-red-btn" class="change-color-red">
-        Поменять цвет
-      </button>
+      <button id="change-color-red-btn" class="change-color-red">Поменять цвет</button>
       <button id="change-color-card-button">Сменить цвета карточек</button>
     </div>
-
+  
     <div class="container">
       <ul class="card-list">
         <li class="card-container">
@@ -41,13 +33,13 @@
             <div class="bg-flowers">
               <img src="maket1-mys/bg 1.png" alt="Фон цветы" />
             </div>
-            <h3>ТОВАР</h3>
+            <p class="category-label">Распродажа -20%</p>
 
-            <img src="img-cards/card-1.png" alt="Крем-гель" />
-            <span>для вашей кожи</span>
+            <img src="img-cards/card-1.png" alt="Крем-гель" loading="lazy" />
+            <span class="product-subtitle">Увлажняющий крем</span>
             <h2>Крем-гель</h2>
-            <p>Отлично разглаживает кожу</p>
-            <span>Состав:</span>
+            
+            <h3 class="composition-title">Состав:</h3>
             <ul class="composition-list">
               <li class="product-compount1">активная группа витаминов</li>
               <li class="product-compount2">витамины С В1 Е</li>
@@ -55,19 +47,18 @@
             </ul>
             <div class="price-block">
               <b>Цена:</b>
-              <span>1 000 000 <span>&#8381;</span></span>
+              <span>1 000<span>&#8381;</span></span>
             </div>
           </article>
         </li>
-
+        
         <li class="card-container">
           <article>
-            <h3>ТОВАР</h3>
-            <img src="img-cards/card-2.png" alt="Маска" />
-            <span>для вашей кожи</span>
+            <p class="category-label">Распродажа -20%</p>
+            <img src="img-cards/card-2.png" alt="Маска" loading="lazy" />
+            <span class="product-subtitle">КРЕМ ДЛЯ ЛИЦА</span>
             <h2>Маска</h2>
-            <p>Отлично разглаживает кожу</p>
-            <span>Состав:</span>
+            <h3 class="composition-title">Состав:</h3>
             <ul>
               <li class="product-compount1">активная группа витаминов</li>
               <li class="product-compount2">витамины С В1 Е</li>
@@ -82,32 +73,11 @@
 
         <li class="card-container">
           <article>
-            <h3>ТОВАР</h3>
-            <img src="img-cards/card-3.png" alt="Крем" />
-            <span>для вашей кожи</span>
+            <p class="category-label">Распродажа -20%</p>
+            <img src="img-cards/card-3.png" alt="Крем" loading="lazy" />
+            <span class="product-subtitle">крем для кожи</span>
             <h2>Крем</h2>
-            <p>Отлично разглаживает кожу</p>
-            <span>Состав:</span>
-            <ul>
-              <li class="product-compount1">активная группа витаминов</li>
-              <li class="product-compount2">витамины С В1 Е</li>
-              <li class="product-compount3">Имеет солнцезащитное действие</li>
-            </ul>
-            <div class="price-block">
-              <b>Цена:</b>
-              <span>1000<span>&#8381;</span></span>
-            </div>
-          </article>
-        </li>
-
-        <li class="card-container">
-          <article>
-            <h3>ТОВАР</h3>
-            <img src="img-cards/card-4.png" alt="Гель" />
-            <span>для вашей кожи</span>
-            <h2>Гель</h2>
-            <p>Отлично разглаживает кожу</p>
-            <span>Состав:</span>
+            <h3 class="composition-title">Состав:</h3>
             <ul>
               <li class="product-compount1">активная группа витаминов</li>
               <li class="product-compount2">витамины С В1 Е</li>
@@ -122,12 +92,30 @@
 
         <li class="card-container">
           <article>
-            <h3>ТОВАР</h3>
-            <img src="img-cards/card-5.png" alt="Мусс" />
-            <span>для вашей кожи</span>
-            <h2>МУСС</h2>
-            <p>Отлично разглаживает кожу</p>
-            <span>Состав:</span>
+            <p class="category-label">Распродажа -20%</p>
+            <img src="img-cards/card-4.png" alt="Гель" loading="lazy" />
+            <span class="product-subtitle">Увлажняющий гель</span>
+            <h2>Гель</h2>
+            <h3 class="composition-title">Состав:</h3>
+            <ul>
+              <li class="product-compount1">активная группа витаминов</li>
+              <li class="product-compount2">витамины С В1 Е</li>
+              <li class="product-compount3">Имеет солнцезащитное действие</li>
+            </ul>
+            <div class="price-block">
+              <b>Цена:</b>
+              <span>1000 <span>&#8381;</span></span>
+            </div>
+          </article>
+        </li>
+
+        <li class="card-container">
+          <article>
+            <p class="category-label">Распродажа -20%</p>
+            <img src="img-cards/card-5.png" alt="Мусс" loading="lazy" />
+            <span class="product-subtitle">Увлажняющий мусс</span>
+            <h2>Мусс</h2>
+            <h3 class="composition-title">Состав:</h3>
             <ul>
               <li class="product-compount1">активная группа витаминов</li>
               <li class="product-compount2">витамины С В1 Е</li>
@@ -141,6 +129,6 @@
         </li>
       </ul>
     </div>
-    <script src="script.js"></script>
+    <script type="module" src="homework-8.js"></script>
   </body>
 </html>
